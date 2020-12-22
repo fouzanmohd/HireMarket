@@ -8,12 +8,13 @@ const BrandLogoContainer = styled.div`
 `;
 
 const LogoImage = styled.div`
-width: ${({ size })=> size ? size + "px" : "4em"};
-height: ${({ size })=> size ? size + "px" : "4em"};
+width: ${({ size })=> size ? size + "px" : "2.5em"};
+height: ${({ size })=> size ? size + "px" : "2.5em"};
 img{
     height:100%;
     width:100%;
 }
+margin-right:6px;
 `;
 
 const LogoTitle = styled.h2`
@@ -24,13 +25,13 @@ font-weight: 900
 `;
 
 export const BrandLogo = (props) => {
-  const { size } = props;
+  const { textSize,logoSize } = props;
   return (
     <BrandLogoContainer>
-      <LogoImage size={size}>
+      <LogoImage size={logoSize}>
         <img src={LogoImg} alt="hirepro" />
       </LogoImage>
-      <LogoTitle size={size}>HirePro</LogoTitle>
+      <LogoTitle size={textSize}>HirePro</LogoTitle>
     </BrandLogoContainer>
   );
 };
