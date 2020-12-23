@@ -11,7 +11,7 @@
     {
       "id": 2,
       "title": "I will decorate flower vase for you",
-      "thumbnailUrl": "http://localhost:9000/flower.jpg",
+      "thumbnailUrl": "http://localhost:9000/flowers.jpg",
       "rating": 3,
       "specialist": { "id": 1, "fullName": "Spencer Roney" },
       "rate": 16

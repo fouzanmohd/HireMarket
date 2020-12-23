@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {fontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 
@@ -71,16 +71,18 @@ color:#ebe204;
 const StartingAtText = styled.h6`
 margin: 0;
 font-weight: 400;
+font-size:12px;
 color:rgba(161,161,161,0.9);
 `;
 
 const PriceContainer = styled.div`
 display: flex; 
+align-items:center;
 `;
 
 const PriceText = styled.div`
 margin-left: 3px;
-color: #2a9D8F;
+color: #2ba679;
 font-weight: 500;
 `;
 export const ServiceCard = (props) =>{
@@ -93,11 +95,11 @@ export const ServiceCard = (props) =>{
         </TopContainer>
         <ContentContainer>
             <Title>{title}</Title>
-            <SpecialistName>{specialist.fullname}</SpecialistName>
+            <SpecialistName>{specialist.fullName}</SpecialistName>
         </ContentContainer>
         <BottomContainer>
             <RatingContainer>
-                <fontAwesomeIcon icon={faStar} size='sm' />
+                <FontAwesomeIcon icon={faStar} size='sm' />
                 {rating}
             </RatingContainer>
             <PriceContainer>
