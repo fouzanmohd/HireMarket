@@ -1,0 +1,36 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "title": "I will create garden for you",
+      "thumbnailUrl": "http://localhost:9000/garden.jpg",
+      "rating": 4,
+      "specialist": { "id": 1, "fullName": "Spencer Roney" },
+      "rate": 15
+    },
+    {
+      "id": 2,
+      "title": "I will decorate flower vase for you",
+      "thumbnailUrl": "http://localhost:9000/flower.jpg",
+      "rating": 3,
+      "specialist": { "id": 1, "fullName": "Spencer Roney" },
+      "rate": 16
+    },
+    {
+      "id": 3,
+      "title": "I will cut grass for you",
+      "thumbnailUrl": "http://localhost:9000/grass.jpg",
+      "rating": 5,
+      "specialist": { "id": 1, "fullName": "Spencer Roney" },
+      "rate": 19
+    },
+    {
+      "id": 4,
+      "title": "I will create home office for you",
+      "thumbnailUrl": "http://localhost:9000/office.jpg",
+      "rating": 4,
+      "specialist": { "id": 1, "fullName": "Spencer Roney" },
+      "rate": 12
+    }
+  ]
+}
