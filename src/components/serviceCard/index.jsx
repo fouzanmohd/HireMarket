@@ -51,9 +51,10 @@ border-top: 1px solid rgba(15,15,15,0.20)
 
 const Title = styled.h2`
 margin:0;
-font-size:24px;
+font-size:20px;
 font-weight:500;
 color: #000;
+text-align:start;
 `;
 
 const SpecialistName = styled.h3`

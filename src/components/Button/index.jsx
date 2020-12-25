@@ -26,5 +26,5 @@ transition: all 0.2s ease-in-out;
 `;
 export const Button = (props)=> {
     const {size} = props
-    return <ButtonWrapper size = {size}>{props.children}</ButtonWrapper>
+    return <ButtonWrapper size = {size} className={props.className}>{props.children}</ButtonWrapper>
 }
