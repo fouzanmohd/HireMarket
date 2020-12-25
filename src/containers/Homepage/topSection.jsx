@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import TopSectionBackgroundImg from "../../images/landing-page.jpg";
 import TopSectionBestImg from "../../images/best-img.png";
-import {Button} from '../../components/Button'
+import { Button } from "../../components/Button";
 import { BrandLogo } from "./../../components/brandLogo/index";
 const TopSectionContainer = styled.div`
   width: 100%;
@@ -43,34 +43,33 @@ const LogoContainer = styled.div`
   flex-direction: column;
 `;
 
-const Marginer=styled.div`
-margin-top:15px
+const Marginer = styled.div`
+  margin-top: 15px;
 `;
 const TopSectionText = styled.h3`
-margin:0;
-line-height:1.5;
-font-weight:500;
-font-size:28px;
-color:#fff;
-display:flex;
+  margin: 0;
+  line-height: 1.5;
+  font-weight: 500;
+  font-size: 28px;
+  color: #fff;
+  display: flex;
 `;
 export const TopSection = (props) => {
-    const {children} = props
+  const { children } = props;
   return (
     <TopSectionContainer>
       <BackgroundFilter>
-      {children}
+        {children}
         <TopSectionInnerContainer>
           <LogoContainer>
-            <BrandLogo logoSize = {60} textSize={40} />
-          <Marginer>
-          <TopSectionText>Hire the best Professional</TopSectionText>
-          <TopSectionText>depending on your need!</TopSectionText>
-          </Marginer>
-          <Marginer>
-
-          <Button>Join Now</Button>
-          </Marginer>
+            <BrandLogo logoSize={60} textSize={40} />
+            <Marginer>
+              <TopSectionText>Hire the best Professional</TopSectionText>
+              <TopSectionText>depending on your need!</TopSectionText>
+            </Marginer>
+            <Marginer>
+              <Button>Join Now</Button>
+            </Marginer>
           </LogoContainer>
           <StandoutImage>
             <img src={TopSectionBestImg} alt="" />

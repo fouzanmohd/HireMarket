@@ -18,7 +18,7 @@ const ContentContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin-left:10em;
+  margin-left: 10em;
 `;
 
 const SloganContainer = styled.div`
@@ -26,7 +26,6 @@ const SloganContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
 
-  
   margin-bottom: 15px;
 `;
 
@@ -53,10 +52,10 @@ export const SpecialistAd = (props) => {
         <SloganContainer>
           <BrandLogo textSize={35} logoSize={45} />
           <SloganContainer>
-          <Slogan>Are you an Expert?</Slogan>
+            <Slogan>Are you an Expert?</Slogan>
             <Slogan>if yes, Join us</Slogan>
             <Slogan>and get employed!</Slogan>
-            </SloganContainer>
+          </SloganContainer>
           <Button size={13}>Join as Expert</Button>
         </SloganContainer>
         <SpecialistImage>

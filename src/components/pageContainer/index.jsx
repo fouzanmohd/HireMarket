@@ -22,6 +22,5 @@ export const InnerPageContainer = styled.div`
   min-height: 70vh;
   display: flex;
   flex-direction: column;
-  align-items:center ;
-
+  align-items: center;
 `;
