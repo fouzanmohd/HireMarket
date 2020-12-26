@@ -9,6 +9,7 @@ import styled from "styled-components";
 import { deviceSize } from "./../../components/responsive/index";
 import { Services } from "./services";
 import { SpecialistAd } from "./../../components/specialistAd/index";
+import { Footer } from './../../components/footer/index';
 
 const Title = styled.h1`
   font-weight: 900;
@@ -37,6 +38,7 @@ export const Homepage = (props) => {
         </ContentContainer>
         <SpecialistAd />
       </InnerPageContainer>
+      <Footer/>
     </PageContainer>
   );
 };

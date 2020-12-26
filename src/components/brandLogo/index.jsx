@@ -20,18 +20,18 @@ const LogoImage = styled.div`
 const LogoTitle = styled.h2`
   margin: 0;
   font-size: ${({ size }) => (size ? size + "px" : "25px")};
-  color: #fff;
+  color: ${({color})=> color? color: "#fff"};
   font-weight: 900;
 `;
 
 export const BrandLogo = (props) => {
-  const { textSize, logoSize } = props;
+  const { textSize, logoSize, color ,hideLogo } = props;
   return (
     <BrandLogoContainer>
-      <LogoImage size={logoSize}>
+      {!hideLogo && <LogoImage size={logoSize}>
         <img src={LogoImg} alt="hirepro" />
-      </LogoImage>
-      <LogoTitle size={textSize}>HirePro</LogoTitle>
+      </LogoImage>}
+      <LogoTitle size={textSize} color={color}>HirePro</LogoTitle>
     </BrandLogoContainer>
   );
 };
