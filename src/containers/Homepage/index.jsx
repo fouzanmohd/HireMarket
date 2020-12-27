@@ -30,7 +30,7 @@ export const Homepage = (props) => {
   return (
     <PageContainer>
       <TopSection>
-        <NavBar />
+        <NavBar useTransparent />
       </TopSection>
       <InnerPageContainer>
         <ContentContainer>

@@ -10,6 +10,8 @@ const NavBarContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: ${({ useTransparent }) =>
+    useTransparent ? "transparent" : "#264653"};
 `;
 const NavLinkContainer = styled.div`
   height: 100%;
@@ -33,8 +35,9 @@ const Seperator = styled.div`
   margin-right: 15px;
 `;
 export const NavBar = (props) => {
+  const { useTransparent } = props;
   return (
-    <NavBarContainer>
+    <NavBarContainer useTransparent={useTransparent}>
       <BrandLogo />
       <NavLinkContainer>
         <NavLinks>Specialist Area</NavLinks>

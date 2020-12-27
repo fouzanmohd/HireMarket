@@ -78,6 +78,7 @@ export const Services = (props) => {
         ) : (
           <WarningText>There are no Services offered right now!</WarningText>
         )}
+          
       </ServicesWrapper>
       <BottomContainer>
         {servicesOffered.length > 0 && (
