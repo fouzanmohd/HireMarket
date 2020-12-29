@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { BrandLogo } from "./../brandLogo/index";
 import { Button } from "./../Button/index";
@@ -18,7 +19,7 @@ const NavLinkContainer = styled.div`
   display: flex;
   align-items: center;
 `;
-const NavLinks = styled.a`
+const NavLinks = styled(Link)`
   text-decoration: none;
   color: #fff;
   display: flex;
@@ -42,8 +43,10 @@ export const NavBar = (props) => {
       <NavLinkContainer>
         <NavLinks>Specialist Area</NavLinks>
         <Seperator />
+        <Link to="/customer/access/register">
         <Button size={11}>Sign up</Button>
-        <NavLinks>Sign in</NavLinks>
+        </Link>
+        <NavLinks to="/customer/access/signin">Sign in</NavLinks>
       </NavLinkContainer>
     </NavBarContainer>
   );

@@ -1,10 +1,12 @@
 import React from "react";
 import LogoImg from "../../images/logos/logo.png";
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
 
-const BrandLogoContainer = styled.div`
+const BrandLogoContainer = styled(Link)`
   display: flex;
   align-items: center;
+  text-decoration:none;
 `;
 
 const LogoImage = styled.div`
@@ -27,7 +29,7 @@ const LogoTitle = styled.h2`
 export const BrandLogo = (props) => {
   const { textSize, logoSize, color ,hideLogo } = props;
   return (
-    <BrandLogoContainer>
+    <BrandLogoContainer to="/">
       {!hideLogo && <LogoImage size={logoSize}>
         <img src={LogoImg} alt="hirepro" />
       </LogoImage>}
