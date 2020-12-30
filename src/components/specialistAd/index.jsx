@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { BrandLogo } from "../brandLogo";
 import farming from "../../images/farming.png";
 import { Button } from "./../Button/index";
+import { useMediaQuery } from "react-responsive";
+import { deviceSize } from './../responsive/index';
 
 const SpecialistAdContainer = styled.div`
   width: 100%;
@@ -17,8 +19,7 @@ const ContentContainer = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  margin-left: 10em;
+  justify-content: ${({isMobile})=> isMobile? "center" : "space-evenly"};
 `;
 
 const SloganContainer = styled.div`
@@ -31,7 +32,7 @@ const SloganContainer = styled.div`
 
 const Slogan = styled.h2`
   margin: 0;
-  font-size: 25px;
+  font-size: ${({isMobile})=> isMobile? "8px" : "25px"};
   color: #fff;
   font-weight: 700;
   line-height: 1.3;
@@ -40,17 +41,21 @@ const Slogan = styled.h2`
 const SpecialistImage = styled.div`
   width: 35em;
   height: 29em;
+  margin-left: 20em;
   img {
     width: 100%;
     height: 100%;
   }
 `;
 export const SpecialistAd = (props) => {
+  const isMobile = useMediaQuery({maxWidth: deviceSize.mobile})
+  console.log(isMobile)
+
   return (
     <SpecialistAdContainer>
       <ContentContainer>
         <SloganContainer>
-          <BrandLogo textSize={35} logoSize={45} />
+          <BrandLogo textSize={isMobile? 20: 35} logoSize={isMobile? 25: 45} />
           <SloganContainer>
             <Slogan>Are you an Expert?</Slogan>
             <Slogan>if yes, Join us</Slogan>
@@ -58,9 +63,9 @@ export const SpecialistAd = (props) => {
           </SloganContainer>
           <Button size={13}>Join as Expert</Button>
         </SloganContainer>
-        <SpecialistImage>
+        {!isMobile && <SpecialistImage>
           <img src={farming} alt="" />
-        </SpecialistImage>
+        </SpecialistImage>}
       </ContentContainer>
     </SpecialistAdContainer>
   );

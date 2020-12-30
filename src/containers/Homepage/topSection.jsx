@@ -60,7 +60,6 @@ const TopSectionText = styled.h3`
 export const TopSection = (props) => {
   const { children } = props;
   const isMobile = useMediaQuery({maxWidth: deviceSize.mobile})
-  console.log(isMobile)
   return (
     <TopSectionContainer>
       <BackgroundFilter>
