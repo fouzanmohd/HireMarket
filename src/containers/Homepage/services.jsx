@@ -3,12 +3,14 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { ServiceCard } from "./../../components/serviceCard/index";
 import { Button } from "./../../components/Button/index";
+import { useMediaQuery } from "react-responsive";
+import { deviceSize } from './../../components/responsive/index';
 
 const ServicesContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 `;
 
 const Title = styled.h1`
@@ -19,6 +21,7 @@ const Title = styled.h1`
 const ServicesWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content:center;
 `;
 
 const WarningText = styled.h3`
@@ -46,11 +49,8 @@ const ViewMoreButton = styled(Button)`
 
 export const Services = (props) => {
   const [servicesOffered, setServices] = useState([]);
-  const [isLoading, setLoading] = useState(false);
-  const isServicesEmpty =
-    !servicesOffered || (servicesOffered && servicesOffered.length === 0);
+  const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
   const fetchResponse = async () => {
-    setLoading(true);
     const response = await Axios.get("http://localhost:9000/services").catch(
       (err) => {
         console.log("Error: ", err);
@@ -59,9 +59,7 @@ export const Services = (props) => {
 
     if (response) {
       setServices(response.data);
-      console.log(servicesOffered);
     }
-    setLoading(false);
   };
 
   useEffect(() => {

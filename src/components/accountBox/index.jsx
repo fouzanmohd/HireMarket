@@ -98,7 +98,6 @@ export function AccountBox(props) {
  const {initialActive} = props;
   const [isExpanded, setExpanded] = useState(false);
   const [active, setActive] = useState(initialActive?initialActive:"signin");
-console.log(initialActive)
   const playExpandingAnimation = () => {
     setExpanded(true);
     setTimeout(() => {
