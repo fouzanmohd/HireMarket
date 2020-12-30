@@ -5,7 +5,7 @@ import TopSectionBestImg from "../../images/best-img.png";
 import { Button } from "../../components/Button";
 import { BrandLogo } from "./../../components/brandLogo/index";
 import { useMediaQuery } from "react-responsive";
-import { deviceSize } from './../../components/responsive/index';
+import { deviceSize } from "./../../components/responsive/index";
 const TopSectionContainer = styled.div`
   width: 100%;
   height: 100vh;
@@ -27,7 +27,7 @@ const TopSectionInnerContainer = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: ${({isMobile})=>isMobile ? "center" : "space-evenly"};
+  justify-content: ${({ isMobile }) => (isMobile ? "center" : "space-evenly")};
 `;
 
 const StandoutImage = styled.div`
@@ -59,25 +59,30 @@ const TopSectionText = styled.h3`
 
 export const TopSection = (props) => {
   const { children } = props;
-  const isMobile = useMediaQuery({maxWidth: deviceSize.mobile})
+  const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
   return (
     <TopSectionContainer>
       <BackgroundFilter>
         {children}
         <TopSectionInnerContainer>
           <LogoContainer>
-            <BrandLogo logoSize={isMobile? 40: 60} textSize={isMobile?35: 40} />
+            <BrandLogo
+              logoSize={isMobile ? 40 : 60}
+              textSize={isMobile ? 35 : 40}
+            />
             <Marginer>
               <TopSectionText>Hire the best Professional</TopSectionText>
               <TopSectionText>depending on your need!</TopSectionText>
             </Marginer>
             <Marginer>
-                <Button>Join Now</Button>
+              <Button>Join Now</Button>
             </Marginer>
           </LogoContainer>
-         {!isMobile && <StandoutImage>
-            <img src={TopSectionBestImg} alt="" />
-          </StandoutImage>}
+          {!isMobile && (
+            <StandoutImage>
+              <img src={TopSectionBestImg} alt="" />
+            </StandoutImage>
+          )}
         </TopSectionInnerContainer>
       </BackgroundFilter>
     </TopSectionContainer>

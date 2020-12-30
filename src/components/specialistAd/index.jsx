@@ -4,7 +4,7 @@ import { BrandLogo } from "../brandLogo";
 import farming from "../../images/farming.png";
 import { Button } from "./../Button/index";
 import { useMediaQuery } from "react-responsive";
-import { deviceSize } from './../responsive/index';
+import { deviceSize } from "./../responsive/index";
 
 const SpecialistAdContainer = styled.div`
   width: 100%;
@@ -19,7 +19,7 @@ const ContentContainer = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: ${({isMobile})=> isMobile? "center" : "space-evenly"};
+  justify-content: ${({ isMobile }) => (isMobile ? "center" : "space-evenly")};
 `;
 
 const SloganContainer = styled.div`
@@ -32,7 +32,7 @@ const SloganContainer = styled.div`
 
 const Slogan = styled.h2`
   margin: 0;
-  font-size: ${({isMobile})=> isMobile? "8px" : "25px"};
+  font-size: ${({ isMobile }) => (isMobile ? "8px" : "25px")};
   color: #fff;
   font-weight: 700;
   line-height: 1.3;
@@ -48,14 +48,16 @@ const SpecialistImage = styled.div`
   }
 `;
 export const SpecialistAd = (props) => {
-  const isMobile = useMediaQuery({maxWidth: deviceSize.mobile})
-  console.log(isMobile)
+  const isMobile = useMediaQuery({ maxWidth: deviceSize.mobile });
 
   return (
     <SpecialistAdContainer>
       <ContentContainer>
         <SloganContainer>
-          <BrandLogo textSize={isMobile? 20: 35} logoSize={isMobile? 25: 45} />
+          <BrandLogo
+            textSize={isMobile ? 20 : 35}
+            logoSize={isMobile ? 25 : 45}
+          />
           <SloganContainer>
             <Slogan>Are you an Expert?</Slogan>
             <Slogan>if yes, Join us</Slogan>
@@ -63,9 +65,11 @@ export const SpecialistAd = (props) => {
           </SloganContainer>
           <Button size={13}>Join as Expert</Button>
         </SloganContainer>
-        {!isMobile && <SpecialistImage>
-          <img src={farming} alt="" />
-        </SpecialistImage>}
+        {!isMobile && (
+          <SpecialistImage>
+            <img src={farming} alt="" />
+          </SpecialistImage>
+        )}
       </ContentContainer>
     </SpecialistAdContainer>
   );
